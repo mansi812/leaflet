@@ -1,0 +1,20 @@
+
+28 August 2018
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+```{r leaf}
+library(leaflet)
+df<-data.frame(lat=runif(20,min=30.62,max=30.69),lng=runif(20,min=77.37,max=77.57))
+df %>%
+leaflet() %>%
+addTiles() %>%
+addMarkers() %>%
+addMarkers(lat=30.62,lng=77.37,popup="My Map experiment")
+
+```
+
